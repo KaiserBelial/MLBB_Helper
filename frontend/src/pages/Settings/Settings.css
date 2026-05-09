@@ -33,7 +33,6 @@
   .settings-sidebar {
     flex-direction: column;
     min-width: 180px;
-    gap: var(--space-xs);
   }
 }
 
@@ -56,7 +55,6 @@
   color: var(--color-text-primary);
 }
 
-/* active section */
 .sidebar-btn.active {
   background-color: var(--color-bg-elevated);
   color: var(--color-accent-cyan);
@@ -147,7 +145,6 @@
   gap: var(--space-xs);
 }
 
-/* upload button */
 .btn-upload {
   display: inline-block;
   padding: var(--space-xs) var(--space-md);
@@ -204,25 +201,6 @@
   font-weight: 500;
 }
 
-/*____ Secondary Button ____*/
-.btn-secondary {
-  align-self: flex-start;
-  padding: var(--space-xs) var(--space-md);
-  background-color: transparent;
-  color: var(--color-text-secondary);
-  font-size: var(--font-size-sm);
-  font-weight: 500;
-  border: 1px solid var(--color-bg-elevated);
-  border-radius: var(--radius-md);
-  transition: all 0.2s ease;
-  cursor: pointer;
-}
-
-.btn-secondary:hover {
-  border-color: var(--color-accent-cyan);
-  color: var(--color-accent-cyan);
-}
-
 /*____ Inline Hero Picker ____*/
 .inline-picker {
   display: flex;
@@ -230,126 +208,4 @@
   gap: var(--space-md);
   padding-top: var(--space-md);
   border-top: 1px solid var(--color-bg-elevated);
-}
-
-.picker-search {
-  background-color: var(--color-bg-elevated);
-  border: 1px solid var(--color-bg-elevated);
-  border-radius: var(--radius-md);
-  padding: var(--space-sm) var(--space-md);
-  color: var(--color-text-primary);
-  font-size: var(--font-size-base);
-  outline: none;
-  transition: border-color 0.2s ease;
-}
-
-.picker-search:focus {
-  border-color: var(--color-accent-cyan);
-}
-
-.picker-search::placeholder {
-  color: var(--color-text-muted);
-}
-
-.inline-hero-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-sm);
-}
-
-@media (min-width: 480px) {
-  .inline-hero-grid {
-    grid-template-columns: repeat(6, 1fr);
-  }
-}
-
-.inline-hero-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-xs);
-  padding: var(--space-xs);
-  border-radius: var(--radius-md);
-  border: 1px solid var(--color-bg-elevated);
-  background-color: var(--color-bg-elevated);
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.inline-hero-card:hover {
-  border-color: var(--color-accent-cyan);
-}
-
-.inline-hero-card.selected {
-  border-color: var(--color-accent-cyan);
-  background-color: var(--color-accent-glow);
-}
-
-.inline-hero-portrait {
-  width: 40px;
-  height: 40px;
-  border-radius: var(--radius-sm);
-  border: 2px solid;
-  background-color: var(--color-bg-surface);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: var(--font-size-base);
-  font-weight: 700;
-}
-
-.inline-hero-name {
-  font-size: 0.7rem;
-  color: var(--color-text-secondary);
-  text-align: center;
-}
-
-/*____ Rank Selector ____*/
-.rank-selector {
-  display: flex;
-  gap: var(--space-sm);
-}
-
-.rank-btn {
-  flex: 1;
-  padding: var(--space-sm) var(--space-md);
-  background-color: var(--color-bg-elevated);
-  border: 1px solid var(--color-bg-elevated);
-  border-radius: var(--radius-md);
-  color: var(--color-text-secondary);
-  font-size: var(--font-size-sm);
-  font-weight: 500;
-  transition: all 0.2s ease;
-  cursor: pointer;
-}
-
-.rank-btn:hover {
-  border-color: var(--color-accent-cyan);
-  color: var(--color-accent-cyan);
-}
-
-.rank-btn.active {
-  background-color: var(--color-accent-cyan);
-  border-color: var(--color-accent-cyan);
-  color: #0d0f14;
-  font-weight: 600;
-}
-
-/*____ Danger Button ____*/
-.btn-danger {
-  align-self: flex-start;
-  padding: var(--space-sm) var(--space-lg);
-  background-color: transparent;
-  color: var(--color-danger);
-  font-size: var(--font-size-sm);
-  font-weight: 600;
-  border: 1px solid var(--color-danger);
-  border-radius: var(--radius-md);
-  transition: all 0.2s ease;
-  cursor: pointer;
-}
-
-.btn-danger:hover {
-  background-color: var(--color-danger);
-  color: #0d0f14;
 }

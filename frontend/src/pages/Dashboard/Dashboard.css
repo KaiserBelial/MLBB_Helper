@@ -19,6 +19,7 @@
   font-size: var(--font-size-xl);
   font-weight: 700;
   color: var(--color-text-primary);
+  text-align: center;
 }
 
 .dashboard-welcome h2 span {
@@ -29,6 +30,7 @@
   margin-top: var(--space-xs);
   font-size: var(--font-size-sm);
   color: var(--color-text-secondary);
+  text-align: center;
 }
 
 /*____ Rank Selector ____*/

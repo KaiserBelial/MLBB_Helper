@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-/*____ Theme tokens ____*/
+/*____ Theme Tokens ____*/
 :root {
   /* Backgrounds */
   --color-bg-base:     #0d0f14;
@@ -76,7 +76,7 @@ button {
   cursor: pointer;
 }
 
-/*____ Shared Components ____*/
+/*____ Shared Buttons ____*/
 .btn-primary {
   width: 100%;
   padding: var(--space-sm) var(--space-md);
@@ -92,4 +92,212 @@ button {
 .btn-primary:hover {
   opacity: 0.9;
   box-shadow: 0 0 16px var(--color-accent-glow);
+}
+
+.btn-secondary {
+  padding: var(--space-xs) var(--space-md);
+  background-color: transparent;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  border: 1px solid var(--color-bg-elevated);
+  border-radius: var(--radius-md);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-accent-cyan);
+  color: var(--color-accent-cyan);
+}
+
+.btn-danger {
+  align-self: flex-start;
+  padding: var(--space-sm) var(--space-lg);
+  background-color: transparent;
+  color: var(--color-danger);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  border: 1px solid var(--color-danger);
+  border-radius: var(--radius-md);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-danger:hover {
+  background-color: var(--color-danger);
+  color: #0d0f14;
+}
+
+/*____ Forms ____*/
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.form-group label {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.form-group input {
+  background-color: var(--color-bg-elevated);
+  border: 1px solid var(--color-bg-elevated);
+  border-radius: var(--radius-md);
+  padding: var(--space-sm) var(--space-md);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-base);
+  transition: border-color 0.2s ease;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: var(--color-accent-cyan);
+}
+
+.form-group input::placeholder {
+  color: var(--color-text-muted);
+}
+
+/*____ Rank Selector ____*/
+.rank-selector {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.rank-btn {
+  flex: 1;
+  padding: var(--space-sm) var(--space-md);
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-bg-elevated);
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.rank-btn:hover {
+  border-color: var(--color-accent-cyan);
+  color: var(--color-accent-cyan);
+}
+
+.rank-btn.active {
+  background-color: var(--color-accent-cyan);
+  border-color: var(--color-accent-cyan);
+  color: #0d0f14;
+  font-weight: 600;
+}
+
+/*____ Panel Title ____*/
+.panel-title {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--color-bg-elevated);
+}
+
+/*____ Section Titles ____*/
+.section-title {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section-title.my {
+  color: var(--color-accent-cyan);
+}
+
+.section-title.enemy {
+  color: var(--color-danger);
+}
+
+/*____ Hero Grid ____*/
+.hero-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-sm);
+}
+
+@media (min-width: 480px) {
+  .hero-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-grid {
+    grid-template-columns: repeat(9, 1fr);
+  }
+}
+
+.hero-grid-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-xs);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-bg-elevated);
+  background-color: var(--color-bg-elevated);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.hero-grid-card:hover {
+  border-color: var(--color-accent-cyan);
+  transform: translateY(-2px);
+}
+
+.hero-grid-card.selected {
+  border-color: var(--color-accent-cyan);
+  background-color: var(--color-accent-glow);
+  box-shadow: 0 0 16px var(--color-accent-glow);
+}
+
+.hero-grid-portrait {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  border: 2px solid;
+  background-color: var(--color-bg-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+}
+
+.hero-grid-name {
+  font-size: 0.7rem;
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+/*____ Search Input ____*/
+.search-input {
+  background-color: var(--color-bg-elevated);
+  border: 1px solid var(--color-bg-elevated);
+  border-radius: var(--radius-md);
+  padding: var(--space-sm) var(--space-md);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-base);
+  outline: none;
+  transition: border-color 0.2s ease;
+  font-family: var(--font-main);
+}
+
+.search-input:focus {
+  border-color: var(--color-accent-cyan);
+}
+
+.search-input::placeholder {
+  color: var(--color-text-muted);
 }

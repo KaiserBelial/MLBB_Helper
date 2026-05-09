@@ -1,23 +1,8 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Navbar from '../../components/Navbar/Navbar'
+import { ROLE_COLOURS, RANKS } from '../../utils/constants'
 import './Dashboard.css'
-
-/* Role colours — matches HeroPicker */
-const ROLE_COLOURS = {
-  Fighter:  '#ff6b35',
-  Marksman: '#00d4ff',
-  Tank:     '#3b6bff',
-  Mage:     '#b44fff',
-  Assassin: '#ff4d6a',
-  Support:  '#00e5a0',
-}
-
-const RANKS = [
-  { id: 'epic',   label: 'Epic or lower', bans: 3 },
-  { id: 'legend', label: 'Legend',        bans: 4 },
-  { id: 'mythic', label: 'Mythic+',       bans: 5 },
-]
 
 function Dashboard() {
   const navigate = useNavigate()
@@ -59,7 +44,7 @@ function Dashboard() {
         {/* Welcome */}
         <div className="dashboard-welcome">
           <h2>Welcome back, <span>Kaiser</span></h2>
-          <p>Ready to dominate the draft?</p>
+          <p>"In the world of Kung Fu, speed defines the winner"</p>
         </div>
 
         {/* Rank selector */}
@@ -88,73 +73,11 @@ function Dashboard() {
         {/* Grid */}
         <div className="dashboard-grid">
 
-          {/* Left column */}
+          {/* Left column — placeholder */}
           <div className="dashboard-left">
 
-            {/* Hero Card */}
-            {favouriteHero && (
-              <div className="hero-card-panel">
-                <h3 className="panel-title">Favourite Hero</h3>
-                <div className="hero-card-content">
-                  <div
-                    className="hero-card-portrait"
-                    style={{ borderColor: ROLE_COLOURS[favouriteHero.role] }}
-                  >
-                    <span
-                      className="hero-card-initial"
-                      style={{ color: ROLE_COLOURS[favouriteHero.role] }}
-                    >
-                      {favouriteHero.initial}
-                    </span>
-                  </div>
-                  <div className="hero-card-info">
-                    <p className="hero-card-name">{favouriteHero.name}</p>
-                    <p
-                      className="hero-card-role"
-                      style={{ color: ROLE_COLOURS[favouriteHero.role] }}
-                    >
-                      {favouriteHero.role}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* Stats Panel */}
-            <div className="dashboard-stats">
-              <h3 className="panel-title">Your Stats</h3>
-
-              <div className="stat-item">
-                <span className="stat-label">Games Analysed</span>
-                <span className="stat-value">24</span>
-              </div>
-
-              <div className="stat-item">
-                <span className="stat-label">Win Rate</span>
-                <span className="stat-value stat-highlight">68%</span>
-              </div>
-
-              <div className="stat-item">
-                <span className="stat-label">Coin Balance</span>
-                <span className="stat-value stat-highlight">12 ⬡</span>
-              </div>
-            </div>
           </div>
 
-          {/* Recent Activity */}
-          <div className="dashboard-recent">
-            <h3 className="panel-title">Recent Analyses</h3>
-
-            {[1, 2, 3].map((item) => (
-              <div className="activity-card" key={item}>
-                <div className="activity-info">
-                  <span className="activity-title">Draft #{item}</span>
-                  <span className="activity-date">2 days ago</span>
-                </div>
-                <span className="activity-result win">Win</span>
-              </div>
-            ))}
-          </div>
         </div>
       </main>
     </div>

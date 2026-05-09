@@ -50,34 +50,6 @@
   gap: var(--space-md);
 }
 
-/* label */
-.register-form label {
-  font-size: var(--font-size-sm);
-  font-weight: 500;
-  color: var(--color-text-secondary);
-}
-
-/* input */
-.register-form input {
-  background-color: var(--color-bg-elevated);
-  border: 1px solid var(--color-bg-elevated);
-  border-radius: var(--radius-md);
-  padding: var(--space-sm) var(--space-md);
-  color: var(--color-text-primary);
-  font-size: var(--font-size-base);
-  transition: border-color 0.2s ease;
-  outline: none;
-}
-
-/* focus and placeholder */
-.register-form input:focus {
-  border-color: var(--color-accent-cyan);
-}
-
-.register-form input::placeholder {
-  color: var(--color-text-muted);
-}
-
 /*____ Footer ____*/
 .register-footer {
   text-align: center;
