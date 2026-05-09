@@ -1,0 +1,347 @@
+/*____ Page ____*/
+.draft-page {
+  min-height: 100vh;
+  background-color: var(--color-bg-base);
+}
+
+/*____ Main ____*/
+.draft-main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+/*____ Header ____*/
+.draft-header h2 {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.draft-header h2 span {
+  color: var(--color-accent-cyan);
+}
+
+.draft-header p {
+  margin-top: var(--space-xs);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+/*____ Phase Indicator ____*/
+.draft-phases {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.phase-step {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  opacity: 0.4;
+}
+
+.phase-step.active {
+  opacity: 1;
+}
+
+.phase-step.done {
+  opacity: 0.6;
+}
+
+.phase-number {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--color-bg-elevated);
+  border: 1px solid var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.phase-step.active .phase-number {
+  background-color: var(--color-accent-cyan);
+  border-color: var(--color-accent-cyan);
+  color: #0d0f14;
+}
+
+.phase-label {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.phase-step.active .phase-label {
+  color: var(--color-text-primary);
+}
+
+.phase-divider {
+  flex: 1;
+  height: 1px;
+  background-color: var(--color-bg-elevated);
+  max-width: 60px;
+}
+
+/*____ Ban Sections ____*/
+.draft-bans {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.ban-section {
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-bg-elevated);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/*____ Section titles ____*/
+.section-title {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section-title.my {
+  color: var(--color-accent-cyan);
+}
+
+.section-title.enemy {
+  color: var(--color-danger);
+}
+
+/*____ Slots ____*/
+.slots-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.draft-slot {
+  flex: 1;
+  min-width: 80px;
+  height: 64px;
+  background-color: var(--color-bg-elevated);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: var(--space-xs);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+/* ban slot style */
+.draft-slot.ban {
+  border: 1px dashed var(--color-text-muted);
+}
+
+/* pick slot style */
+.draft-slot.pick {
+  border: 1px dashed var(--color-accent-blue);
+  min-width: 100%;
+  height: 56px;
+}
+
+.draft-slot:hover {
+  border-color: var(--color-accent-cyan);
+}
+
+/* active slot */
+.draft-slot.active {
+  border-color: var(--color-accent-cyan);
+  border-style: solid;
+  box-shadow: 0 0 12px var(--color-accent-glow);
+}
+
+/* filled slot */
+.draft-slot.filled {
+  border-style: solid;
+  border-color: var(--color-bg-elevated);
+}
+
+.slot-empty {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.slot-initial {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+}
+
+.slot-name {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+/* clear button */
+.slot-clear {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  font-size: 0.65rem;
+  cursor: pointer;
+  padding: 2px;
+  line-height: 1;
+}
+
+.slot-clear:hover {
+  color: var(--color-danger);
+}
+
+/*____ Picks Phase ____*/
+.draft-picks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+}
+
+.picks-section {
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-bg-elevated);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.picks-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+/*____ Picks Actions ____*/
+.draft-picks-actions {
+  display: flex;
+  gap: var(--space-md);
+}
+
+/* secondary button */
+.btn-secondary {
+  flex: 1;
+  padding: var(--space-sm) var(--space-md);
+  background-color: transparent;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  border: 1px solid var(--color-bg-elevated);
+  border-radius: var(--radius-md);
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-accent-cyan);
+  color: var(--color-accent-cyan);
+}
+
+.draft-picks-actions .btn-primary {
+  flex: 2;
+}
+
+/*____ Hero Picker ____*/
+.draft-picker {
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-bg-elevated);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* search */
+.draft-search {
+  background-color: var(--color-bg-elevated);
+  border: 1px solid var(--color-bg-elevated);
+  border-radius: var(--radius-md);
+  padding: var(--space-sm) var(--space-md);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-base);
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.draft-search:focus {
+  border-color: var(--color-accent-cyan);
+}
+
+.draft-search::placeholder {
+  color: var(--color-text-muted);
+}
+
+/*____ Draft Hero Grid ____*/
+.draft-hero-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-sm);
+}
+
+@media (min-width: 480px) {
+  .draft-hero-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .draft-hero-grid {
+    grid-template-columns: repeat(9, 1fr);
+  }
+}
+
+.draft-hero-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-xs);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-bg-elevated);
+  background-color: var(--color-bg-elevated);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.draft-hero-card:hover {
+  border-color: var(--color-accent-cyan);
+  transform: translateY(-2px);
+}
+
+.draft-hero-portrait {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  border: 2px solid;
+  background-color: var(--color-bg-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+}
+
+.draft-hero-name {
+  font-size: 0.7rem;
+  color: var(--color-text-secondary);
+  text-align: center;
+}

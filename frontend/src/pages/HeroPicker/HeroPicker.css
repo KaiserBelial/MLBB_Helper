@@ -1,0 +1,172 @@
+/*____ Page ____*/
+.picker-page {
+  min-height: 100vh;
+  background-color: var(--color-bg-base);
+  padding: var(--space-xl) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+/*____ Header ____*/
+.picker-header {
+  text-align: center;
+}
+
+.picker-header h1 {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.picker-header h1 span {
+  color: var(--color-accent-cyan);
+}
+
+.picker-header p {
+  margin-top: var(--space-xs);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+/*____ Filters ____*/
+.picker-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-sm);
+}
+
+.filter-btn {
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-bg-elevated);
+  background-color: var(--color-bg-surface);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.filter-btn:hover {
+  border-color: var(--color-accent-cyan);
+  color: var(--color-accent-cyan);
+}
+
+/* active filter */
+.filter-btn.active {
+  background-color: var(--color-accent-cyan);
+  border-color: var(--color-accent-cyan);
+  color: #0d0f14;
+}
+
+/*____ Grid ____*/
+.picker-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  width: 100%;
+  max-width: 900px;
+}
+
+@media (min-width: 480px) {
+  .picker-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .picker-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/*____ Hero Card ____*/
+.hero-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-sm);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-bg-elevated);
+  background-color: var(--color-bg-surface);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.hero-card:hover {
+  border-color: var(--color-accent-cyan);
+  transform: translateY(-2px);
+}
+
+/* selected state */
+.hero-card.selected {
+  border-color: var(--color-accent-cyan);
+  background-color: var(--color-accent-glow);
+  box-shadow: 0 0 16px var(--color-accent-glow);
+}
+
+/*____ Portrait ____*/
+.hero-portrait {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  border: 2px solid;
+  background-color: var(--color-bg-elevated);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-initial {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+}
+
+/* hero name and role */
+.hero-name {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  text-align: center;
+}
+
+.hero-role {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+/*____ Confirm Bar ____*/
+.picker-confirm {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-bg-surface);
+  border-top: 1px solid var(--color-bg-elevated);
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  z-index: 100;
+}
+
+.picker-confirm p {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+}
+
+.picker-confirm p span {
+  color: var(--color-accent-cyan);
+  font-weight: 600;
+}
+
+.picker-confirm .btn-primary {
+  width: auto;
+  padding: var(--space-sm) var(--space-xl);
+}

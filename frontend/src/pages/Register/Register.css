@@ -1,0 +1,86 @@
+/*____ Page ____*/
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md);
+  background-color: var(--color-bg-base);
+}
+
+/*____ Card ____*/
+.register-card {
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-bg-elevated);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+/*____ Brand ____*/
+.register-brand {
+  text-align: center;
+}
+
+.register-logo {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--color-text-primary);
+}
+
+.register-logo span {
+  color: var(--color-accent-cyan);
+}
+
+.register-tagline {
+  margin-top: var(--space-xs);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+/*____ Form ____*/
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* label */
+.register-form label {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+/* input */
+.register-form input {
+  background-color: var(--color-bg-elevated);
+  border: 1px solid var(--color-bg-elevated);
+  border-radius: var(--radius-md);
+  padding: var(--space-sm) var(--space-md);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-base);
+  transition: border-color 0.2s ease;
+  outline: none;
+}
+
+/* focus and placeholder */
+.register-form input:focus {
+  border-color: var(--color-accent-cyan);
+}
+
+.register-form input::placeholder {
+  color: var(--color-text-muted);
+}
+
+/*____ Footer ____*/
+.register-footer {
+  text-align: center;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}

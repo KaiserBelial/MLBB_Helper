@@ -1,0 +1,21 @@
+# Python / Django (for when backend is added)
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+*.sqlite3
+media/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/

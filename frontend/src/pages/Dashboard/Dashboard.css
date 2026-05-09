@@ -1,0 +1,270 @@
+/*____ Page ____*/
+.dashboard-page {
+  min-height: 100vh;
+  background-color: var(--color-bg-base);
+}
+
+/*____ Main ____*/
+.dashboard-main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+/*____ Welcome ____*/
+.dashboard-welcome h2 {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.dashboard-welcome h2 span {
+  color: var(--color-accent-cyan);
+}
+
+.dashboard-welcome p {
+  margin-top: var(--space-xs);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+/*____ Rank Selector ____*/
+.rank-selector {
+  display: flex;
+  gap: var(--space-sm);
+  width: 80%;
+  align-self: center;
+}
+
+@media (min-width: 768px) {
+  .rank-selector {
+    width: 100%;
+    align-self: stretch;
+  }
+}
+
+.rank-btn {
+  flex: 1;
+  padding: var(--space-sm) var(--space-md);
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-bg-elevated);
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.rank-btn:hover {
+  border-color: var(--color-accent-cyan);
+  color: var(--color-accent-cyan);
+}
+
+/* active rank */
+.rank-btn.active {
+  background-color: var(--color-accent-cyan);
+  border-color: var(--color-accent-cyan);
+  color: #0d0f14;
+  font-weight: 600;
+}
+
+/* error */
+.rank-error {
+  font-size: var(--font-size-sm);
+  color: var(--color-danger);
+  align-self: center;
+  text-align: center;
+}
+
+/*____ CTA Button ____*/
+.btn-analyse {
+  width: 80%;
+  padding: var(--space-md);
+  font-size: var(--font-size-lg);
+  letter-spacing: 1px;
+  align-self: center;
+}
+
+@media (min-width: 768px) {
+  .btn-analyse {
+    width: 100%;
+    align-self: stretch;
+  }
+}
+
+/*____ Grid ____*/
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: 300px 1fr;
+  }
+}
+
+/*____ Left Column ____*/
+.dashboard-left {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+/*____ Hero Card Panel ____*/
+.hero-card-panel {
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-bg-elevated);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.hero-card-content {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+/* portrait */
+.hero-card-portrait {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-md);
+  border: 2px solid;
+  background-color: var(--color-bg-elevated);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.hero-card-initial {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+}
+
+/* info */
+.hero-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.hero-card-name {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.hero-card-role {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+}
+
+/*____ Stats Panel ____*/
+.dashboard-stats {
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-bg-elevated);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* panel title */
+.panel-title {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--color-bg-elevated);
+}
+
+/* stat item */
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.stat-value {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.stat-highlight {
+  color: var(--color-accent-cyan);
+}
+
+/*____ Recent Activity ____*/
+.dashboard-recent {
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-bg-elevated);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* activity card */
+.activity-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-bg-elevated);
+  border-radius: var(--radius-md);
+  padding: var(--space-sm) var(--space-md);
+}
+
+.activity-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.activity-title {
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.activity-date {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+/* result badge */
+.activity-result {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+}
+
+.activity-result.win {
+  background-color: rgba(0, 229, 160, 0.15);
+  color: var(--color-success);
+}
+
+.activity-result.loss {
+  background-color: rgba(255, 77, 106, 0.15);
+  color: var(--color-danger);
+}
